@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= pageTitle %></title>
+    <%- include('../includes/cssLink.ejs') %>
+    <style>
+      .field {
+        display: block;
+        width: 100%;
+      }
+      .box {
+        width: 360px;
+        margin: 10px auto;
+      }
+      .btn {
+        width: 100%;
+      }
+      .label {
+        margin-top: 3px;
+      }
+      span {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <%- include('../includes/navigation.ejs') %>
+
+    <div class="container">
+      <div class="box">
+        <div class="field">
+          <form>
+            <label class="label">UNOM Reg_No</label>
+            <input
+              class="input"
+              type="number"
+              name="reg_no"
+              id="reg_no"
+              placeholder="UNOM Regester Number"
+              required
+            />
+            <label class="label">Username <span>*</span></label>
+            <input
+              class="input"
+              type="text"
+              name="username"
+              id="username"
+              placeholder="Username"
+              required
+            />
+            <label class="label">Name <span>*</span></label>
+            <input
+              class="input"
+              type="text"
+              name="name"
+              id="name"
+              placeholder="ex. John Doe"
+              required
+            />
+            <label class="label">Date of Birth <span>*</span></label>
+            <input class="input" type="date" name="dob" id="dob" required />
+            <label class="label">Course</label>
+            <input
+              class="input"
+              type="text"
+              name="course"
+              id="course"
+              placeholder="ex. M.Sc or MCA or M.Phil"
+              required
+            />
+            <label class="label">Passed out Year <span>*</span></label>
+            <input
+              class="input"
+              type="number"
+              name="passedout"
+              id="passedout"
+              placeholder="ex. 2022"
+              required
+            />
+            <label class="label">Phone Number <span>*</span></label>
+            <input
+              class="input"
+              type="tel"
+              name="phone"
+              id="phone"
+              placeholder="Phone"
+              required
+            />
+            <label class="label">Email <span>*</span></label>
+            <input
+              class="input"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="ex. example@example.com"
+              required
+            />
+            <label class="label">Password <span>*</span></label>
+            <input
+              class="input"
+              type="password"
+              name="password"
+              id="password"
+              placeholder="********"
+              required
+            />
+            <label class="label">Confirm Password <span>*</span></label>
+            <input
+              class="input"
+              type="password"
+              name="confirmPassword"
+              id="confirmPassword"
+              placeholder="********"
+              required
+            />
+            <button class="button is-success mt-3 btn">Register</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <%- include('../includes/footer.ejs') %>
+    <%-include('../includes/jsLink.ejs') %>
+  </body>
+</html>

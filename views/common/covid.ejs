@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= pageTitle %></title>
+    <%- include('../includes/cssLink.ejs') %>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma-accordion@2.0.1/dist/css/bulma-accordion.min.css"
+    />
+  </head>
+  <body>
+    <%- include('../includes/navigation.ejs') %>
+    <div>
+      <h1 class="has-text-centered is-size-3 mb-4 mt-3">
+        Covid-19 Stastics information (<%= data.country %>)
+      </h1>
+      <section class="info-tiles container animateCo">
+        <div class="tile is-ancestor has-text-centered">
+          <div class="tile is-parent">
+            <article class="tile is-child box">
+              <p class="title has-text-info"><%= data.cases %></p>
+              <p class="subtitle has-text-info">Cases</p>
+            </article>
+          </div>
+          <div class="tile is-parent">
+            <article class="tile is-child box">
+              <p class="title has-text-success"><%= data.recovered %></p>
+              <p class="subtitle has-text-success">Recovered</p>
+            </article>
+          </div>
+          <div class="tile is-parent">
+            <article class="tile is-child box">
+              <p class="title has-text-danger"><%= data.deaths %></p>
+              <p class="subtitle has-text-danger">Deaths</p>
+            </article>
+          </div>
+          <div class="tile is-parent">
+            <article class="tile is-child box">
+              <p class="title has-text-info"><%= data.todayDeaths %></p>
+              <p class="subtitle has-text-info">Today's Cases</p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <h1 class="has-text-centered is-size-3 mb-4 mt-3">FAQ's</h1>
+      <section class="accordions container mt-6">
+        <article class="accordion animateAcc">
+          <div class="accordion-header">
+            <p>What is a coronavirus?</p>
+            <button class="toggle" aria-label="toggle"></button>
+          </div>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              Coronaviruses are a large family of viruses which may cause
+              illness in animals or humans. In humans, several coronaviruses are
+              known to cause respiratory infections ranging from the common cold
+              to more severe diseases such as Middle East Respiratory Syndrome
+              (MERS) and Severe Acute Respiratory Syndrome (SARS). The most
+              recently discovered coronavirus causes coronavirus disease
+              COVID-19.
+            </div>
+          </div>
+        </article>
+        <article class="accordion animateAcc">
+          <div class="accordion-header">
+            <p>What is COVID-19?</p>
+            <button class="toggle" aria-label="toggle"></button>
+          </div>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              COVID-19 is the infectious disease caused by the most recently
+              discovered coronavirus. This new virus and disease were unknown
+              before the outbreak began in Wuhan, China, in December 2019.
+            </div>
+          </div>
+        </article>
+        <article class="accordion animateAcc">
+          <div class="accordion-header">
+            <p>What are the symptoms of COVID-19?</p>
+            <button class="toggle" aria-label="toggle"></button>
+          </div>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              The most common symptoms of COVID-19 are fever, tiredness, and dry
+              cough. Some patients may have aches and pains, nasal congestion,
+              runny nose, sore throat or diarrhea. These symptoms are usually
+              mild and begin gradually. Some people become infected but don’t
+              develop any symptoms and don't feel unwell. Most people (about
+              80%) recover from the disease without needing special treatment.
+              Around 1 out of every 6 people who gets COVID-19 becomes seriously
+              ill and develops difficulty breathing. Older people, and those
+              with underlying medical problems like high blood pressure, heart
+              problems or diabetes, are more likely to develop serious illness.
+              People with fever, cough and difficulty breathing should seek
+              medical attention.
+            </div>
+          </div>
+        </article>
+        <article class="accordion animateAcc">
+          <div class="accordion-header">
+            <p>How does COVID-19 spread?</p>
+            <button class="toggle" aria-label="toggle"></button>
+          </div>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              People can catch COVID-19 from others who have the virus. The
+              disease can spread from person to person through small droplets
+              from the nose or mouth which are spread when a person with
+              COVID-19 coughs or exhales. These droplets land on objects and
+              surfaces around the person. Other people then catch COVID-19 by
+              touching these objects or surfaces, then touching their eyes, nose
+              or mouth. People can also catch COVID-19 if they breathe in
+              droplets from a person with COVID-19 who coughs out or exhales
+              droplets. This is why it is important to stay more than 1 meter (3
+              feet) away from a person who is sick. \nWHO is assessing ongoing
+              research on the ways COVID-19 is spread and will continue to share
+              updated findings.
+            </div>
+          </div>
+        </article>
+        <article class="accordion animateAcc">
+          <div class="accordion-header">
+            <p>
+              Can the virus that causes COVID-19 be transmitted through the air?
+            </p>
+            <button class="toggle" aria-label="toggle"></button>
+          </div>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              Studies to date suggest that the virus that causes COVID-19 is
+              mainly transmitted through contact with respiratory droplets
+              rather than through the air
+            </div>
+          </div>
+        </article>
+        <article class="accordion animateAcc">
+          <div class="accordion-header">
+            <p>Can CoVID-19 be caught from a person who has no symptoms?</p>
+            <button class="toggle" aria-label="toggle"></button>
+          </div>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              The main way the disease spreads is through respiratory droplets
+              expelled by someone who is coughing. The risk of catching COVID-19
+              from someone with no symptoms at all is very low. However, many
+              people with COVID-19 experience only mild symptoms. This is
+              particularly true at the early stages of the disease. It is
+              therefore possible to catch COVID-19 from someone who has, for
+              example, just a mild cough and does not feel ill. WHO is assessing
+              ongoing research on the period of transmission of COVID-19 and
+              will continue to share updated findings.
+            </div>
+          </div>
+        </article>
+        <article class="accordion animateAcc">
+          <div class="accordion-header">
+            <p>
+              Can I catch COVID-19 from the feces of someone with the disease?
+            </p>
+            <button class="toggle" aria-label="toggle"></button>
+          </div>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              The risk of catching COVID-19 from the feces of an infected person
+              appears to be low. While initial investigations suggest the virus
+              may be present in feces in some cases, spread through this route
+              is not a main feature of the outbreak. WHO is assessing ongoing
+              research on the ways COVID-19 is spread and will continue to share
+              new findings. Because this is a risk, however, it is another
+              reason to clean hands regularly, after using the bathroom and
+              before eating.
+            </div>
+          </div>
+        </article>
+        <article class="accordion animateAcc">
+          <div class="accordion-header">
+            <p>How likely am I to catch COVID-19?</p>
+            <button class="toggle" aria-label="toggle"></button>
+          </div>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              The risk depends on where you are - and more specifically, whether
+              there is a COVID-19 outbreak unfolding there.\nFor most people in
+              most locations the risk of catching COVID-19 is still low.
+              However, there are now places around the world (cities or areas)
+              where the disease is spreading. For people living in, or visiting,
+              these areas the risk of catching COVID-19 is higher. Governments
+              and health authorities are taking vigorous action every time a new
+              case of COVID-19 is identified. Be sure to comply with any local
+              restrictions on travel, movement or large gatherings. Cooperating
+              with disease control efforts will reduce your risk of catching or
+              spreading COVID-19.\nCOVID-19 outbreaks can be contained and
+              transmission stopped, as has been shown in China and some other
+              countries. Unfortunately, new outbreaks can emerge rapidly. It’s
+              important to be aware of the situation where you are or intend to
+              go. WHO publishes daily updates on the COVID-19 situation
+              worldwide.
+            </div>
+          </div>
+        </article>
+        <article class="accordion animateAcc">
+          <div class="accordion-header">
+            <p>Who is at risk of developing severe illness?</p>
+            <button class="toggle" aria-label="toggle"></button>
+          </div>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              While we are still learning about how COVID-2019 affects people,
+              older persons and persons with pre-existing medical conditions
+              (such as high blood pressure, heart disease, lung disease, cancer
+              or diabetes) appear to develop serious illness more often than
+              others.
+            </div>
+          </div>
+        </article>
+        <article class="accordion animateAcc">
+          <div class="accordion-header">
+            <p>Should I wear a mask to protect myself?</p>
+            <button class="toggle" aria-label="toggle"></button>
+          </div>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              Only wear a mask if you are ill with COVID-19 symptoms (especially
+              coughing) or looking after someone who may have COVID-19.
+              Disposable face mask can only be used once. If you are not ill or
+              looking after someone who is ill then you are wasting a mask.
+              There is a world-wide shortage of masks, so WHO urges people to
+              use masks wisely.\nWHO advises rational use of medical masks to
+              avoid unnecessary wastage of precious resources and mis-use of
+              masks\nThe most effective ways to protect yourself and others
+              against COVID-19 are to frequently clean your hands, cover your
+              cough with the bend of elbow or tissue and maintain a distance of
+              at least 1 meter (3 feet) from people who are coughing or
+              sneezing.
+            </div>
+          </div>
+        </article>
+        <article class="accordion animateAcc">
+          <div class="accordion-header">
+            <p>
+              Are antibiotics effective in preventing or treating the COVID-19?
+            </p>
+            <button class="toggle" aria-label="toggle"></button>
+          </div>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              No. Antibiotics do not work against viruses, they only work on
+              bacterial infections. COVID-19 is caused by a virus, so
+              antibiotics do not work. Antibiotics should not be used as a means
+              of prevention or treatment of COVID-19. They should only be used
+              as directed by a physician to treat a bacterial infection.
+            </div>
+          </div>
+        </article>
+      </section>
+    </div>
+
+    <%- include('../includes/footer.ejs') %>
+    <%-include('../includes/jsLink.ejs') %>
+    <script src="https://cdn.jsdelivr.net/npm/bulma-accordion@2.0.1/dist/js/bulma-accordion.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script>
+      var accordions = bulmaAccordion.attach();
+      //animation
+
+      gsap.from(".animateCo", {
+        duration: 0.7,
+        ease: "power2. out",
+        opacity: 0,
+        y: -40,
+        delay: 1,
+      });
+      gsap.from(".animateAcc", {
+        duration: 0.7,
+        ease: "power2. out",
+        opacity: 0,
+        y: -40,
+        delay: 1.4,
+      });
+    </script>
+  </body>
+</html>

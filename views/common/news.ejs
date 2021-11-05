@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= pageTitle %></title>
+    <%- include('../includes/cssLink.ejs') %>
+  </head>
+  <body>
+    <%- include('../includes/navigation.ejs') %>
+    <div class="container">
+      <h1 class="has-text-centered is-size-3 mb-4">Today's News</h1>
+      <div class="columns is-multiline">
+        <% news.forEach(function(n, index){ %>
+        <a href="<%- n.url %>" target="_blank">
+          <div class="column is-one-quarter">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img src="<%- n.urlToImage %>" alt="<%- n.author %>" />
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content">
+                    <p class="title is-4"><%- n.source.name %></p>
+                    <p class="subtitle is-6"><%- n.author %></p>
+                  </div>
+                </div>
+
+                <div class="content">
+                  <a href="<%- n.url %>" target="_blank"><%= n.title %></a>.
+                  <a href="<%- n.url %>" target="_blank">#NEWS</a>
+                  <a href="<%- n.url %>" target="_blank">#UNOM</a>
+                  <br />
+                  <time
+                    ><%= moment(n.publishedAt).format('Do MMMM, YYYY') %></time
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <%})%>
+      </div>
+    </div>
+    <%- include('../includes/footer.ejs') %>
+    <%-include('../includes/jsLink.ejs') %>
+  </body>
+</html>

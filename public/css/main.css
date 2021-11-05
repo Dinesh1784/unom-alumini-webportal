@@ -1,0 +1,12 @@
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+.mainFooter {
+  font-size: 1.75rem;
+  margin-bottom: 10px;
+}

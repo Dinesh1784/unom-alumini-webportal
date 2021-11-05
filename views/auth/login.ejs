@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= pageTitle %></title>
+    <%- include('../includes/cssLink.ejs') %>
+    
+    <style>
+    :root {
+      --brandColor: hsl(166, 67%, 51%);
+      --background: rgb(247, 247, 247);
+      --textDark: hsla(0, 0%, 0%, 0.66);
+      --textLight: hsla(0, 0%, 0%, 0.33);
+    }
+
+    body {
+      background: var(--background);
+      height: 100vh;
+      color: var(--textDark);
+    }
+
+    .field:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+
+    .register {
+      margin-top: 7rem;
+      margin-bottom: 7rem;
+      background: white;
+      border-radius: 10px;
+    }
+
+    .left,
+    .right {
+      padding: 4.5rem;
+    }
+
+    .left {
+      border-right: 5px solid var(--background);
+    }
+
+    .left .title {
+      font-weight: 800;
+      letter-spacing: -2px;
+    }
+
+    .left .colored {
+      color: var(--brandColor);
+      font-weight: 500;
+      margin-top: 1rem !important;
+      letter-spacing: -1px;
+    }
+
+    .left p {
+      color: var(--textLight);
+      font-size: 1.15rem;
+    }
+
+    .right .title {
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+
+    .right .description {
+      margin-top: 1rem;
+      margin-bottom: 1rem !important;
+      color: var(--textLight);
+      font-size: 1.15rem;
+    }
+
+    .right small {
+      color: var(--textLight);
+    }
+
+    input {
+      font-size: 1rem;
+    }
+
+    input:focus {
+      border-color: var(--brandColor) !important;
+      box-shadow: 0 0 0 1px var(--brandColor) !important;
+    }
+    .fab,
+    .fas {
+      color: var(--textLight);
+      margin-right: 1rem;
+    }
+    </style>
+  </head>
+  <body>
+    <%- include('../includes/navigation.ejs') %>
+    <section class="container">
+      <div class="columns is-multiline">
+        <div class="column is-8 is-offset-2 register">
+          <div class="columns">
+            <div class="column left">
+              <h1 class="title is-1">UNOM. DCS</h1>
+              <h2 class="subtitle colored is-4">Alumini Web Portal</h2>
+              <p>
+                Login now to keep connect with all our alumini, Department of computer science.
+              </p>
+            </div>
+            <div class="column right has-text-centered">
+              <h1 class="title is-4">Login now!</h1>
+              <form method="POST" action="/login">
+                <div class="field">
+                  <div class="control">
+                    <input
+                      class="input is-medium"
+                      type="text"
+                      placeholder="Username"
+                      name="username"
+                      id="username"
+                    />
+                  </div>
+                </div>
+
+                <div class="field">
+                  <div class="control">
+                    <input
+                      class="input is-medium"
+                      type="password"
+                      placeholder="********"
+                      name="password"
+                      id="password"
+                    />
+                  </div>
+                </div>
+                <button
+                  class="button is-block is-primary is-fullwidth is-medium"
+                  type="submit"
+                >
+                  Login
+                </button>
+                <br />
+                <small><a href="/reset-password">Forget password?</a></small>
+              </form>
+            </div>
+          </div>
+        </div>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <%- include('../includes/footer.ejs') %>
+    <%-include('../includes/jsLink.ejs') %>
+  </body>
+</html>
